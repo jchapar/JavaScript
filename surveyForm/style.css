@@ -13,3 +13,62 @@ body {
   height: 100vh;
   background: url("images/primary-bg.jpg") no-repeat center center / cover;
 }
+
+.container {
+  padding: 2rem;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.heading {
+  color: #fff;
+  text-align: center;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.heading #title {
+  font-size: 3rem;
+}
+
+.heading #description {
+  font-size: 1.4rem;
+}
+
+.form-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  width: 40vw;
+}
+
+#survey-form .form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+#survey-form .text-fields .form-control label,
+#survey-form .dropdown .form-control label,
+#survey-form .radio .form-control label,
+#survey-form .checkbox .form-control label {
+  font-size: 1.2rem;
+}
+
+#survey-form .text-fields .form-control input {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+#survey-form .dropdown .form-control {
+}
