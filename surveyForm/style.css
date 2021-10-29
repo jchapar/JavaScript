@@ -10,8 +10,11 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 10px;
   width: 100%;
-  height: 100vh;
-  background: url("images/primary-bg.jpg") no-repeat center center / cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/primary-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  padding: 3rem;
 }
 
 .container {
@@ -23,7 +26,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   width: 100%;
 }
 
@@ -57,8 +59,7 @@ body {
 
 #survey-form .text-fields .form-control label,
 #survey-form .dropdown .form-control label,
-#survey-form .radio .form-control label,
-#survey-form .checkbox .form-control label {
+#survey-form .radio .form-control label {
   font-size: 1.2rem;
 }
 
@@ -70,5 +71,23 @@ body {
   border: 1px solid #ccc;
 }
 
-#survey-form .dropdown .form-control {
+#survey-form .dropdown {
+  margin-bottom: 1rem;
+}
+
+#survey-form .dropdown .form-control select {
+  padding: 0.5rem;
+}
+
+#survey-form .radio {
+  margin-bottom: 1rem;
+}
+
+#survey-form .radio p {
+  font-size: 1.1rem;
+  padding-bottom: 0.5rem;
+}
+
+#survey-form .checkbox .form-control p {
+  font-size: 1.2rem;
 }
