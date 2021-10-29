@@ -22,7 +22,12 @@
           <div class="text-fields">
             <div class="form-control">
               <label for="name" id="name-label">Name</label>
-              <input type="text" id="name" placeholder="Enter your name" />
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required
+              />
             </div>
             <div class="form-control">
               <label for="email" id="email-label">Email</label>
@@ -35,7 +40,13 @@
             </div>
             <div class="form-control">
               <label for="age" id="number-label">Age (optional)</label>
-              <input type="number" id="age" placeholder="Age" />
+              <input
+                type="number"
+                id="age"
+                placeholder="Age"
+                min="16"
+                max="99"
+              />
             </div>
           </div>
           <!-- Dropdown -->
@@ -157,7 +168,7 @@
             </div>
           </div>
           <!-- Submit -->
-          <input type="button" id="submit" value="Submit" />
+          <input type="submit" id="submit" value="Submit" />
         </form>
       </div>
     </div>
