@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Free Code Camp | Landing Page</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="container flex">
+        <!-- Logo -->
+        <div id="header-img">
+          <img src="images/Halloween_Banner-20111028.svg" alt="Site Logo" />
+        </div>
+        <!-- Navigation -->
+        <nav id="nav-bar">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#pricing" class="nav-link">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a href="#learn-more" class="nav-link learn-more">Learn More</a>
+          </li>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Section One -->
+    <section id="home">
+      <div class="container flex">
+        <div class="home-text">
+          <h1><span>Halloween</span> is here!</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+            voluptas adipisci unde aliquid commodi id officiis quaerat quam
+            porro placeat.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Two -->
+    <section id="about" class="grid">
+      <div class="video-container">
+        <video src="images/about-video.mp4" id="video" controls></video>
+      </div>
+      <div class="about-text">
+        <h2>Come Explore The Holiday</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+          similique blanditiis eaque iusto dolore temporibus aperiam ut
+          dignissimos nostrum quaerat!
+        </p>
+      </div>
+    </section>
+
+    <!-- Section Three -->
+    <section id="pricing">
+      <div class="container flex">
+        <div class="pricing-box">
+          <h2>$49.99</h2>
+          <ul>
+            <li>Lorem</li>
+            <li>Lorem</li>
+            <li>Lorem</li>
+            <li>Lorem</li>
+          </ul>
+        </div>
+        <div class="pricing-box">
+          <h2>$69.99</h2>
+          <ul>
+            <li>Lorem</li>
+            <li>Lorem</li>
+            <li>Lorem</li>
+            <li>Lorem</li>
+          </ul>
+        </div>
+        <div class="pricing-box">
+          <h2>$79.99</h2>
+          <ul>
+            <li>Lorem</li>
+            <li>Lorem</li>
+            <li>Lorem</li>
+            <li>Lorem</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Four -->
+    <section id="learn-more">
+      <div class="container flex">
+        <form action="https://www.freecodecamp.com/email-submit">
+          <div class="form-control">
+            <label for="email">Subscribe for additional information</label>
+            <input type="email" placeholder="Enter Email" />
+          </div>
+          <input type="submit" id="submit" value="Send" class="submit-btn" />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
