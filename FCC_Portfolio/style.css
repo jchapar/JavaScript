@@ -108,7 +108,104 @@ body {
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
   border-radius: 1.5rem;
+  transition: opacity 0.3s ease;
 }
 
 #welcome-section .welcome-banner .btn:hover {
+  opacity: 0.6;
+}
+
+/* Section Two */
+#about {
+  text-align: center;
+  padding: 2rem;
+}
+
+.section-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 2.6rem;
+}
+
+.section-header .underline {
+  height: 2px;
+  background: #fff;
+  width: 10%;
+  margin: 0 auto;
+}
+
+#about .icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+#about .icons .icon i {
+  font-size: 3rem;
+  color: #00a3a3;
+  margin-bottom: 1rem;
+}
+
+#about .icons .icon .icon-title {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+#about .icons .icon .text {
+  font-size: 1.4rem;
+}
+
+/* Section Three */
+#projects {
+  padding: 2rem 0;
+  background: #00a3a3;
+}
+
+#projects .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+#projects .project {
+  background: #333;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+#projects .project p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+#projects .project .buttons {
+  padding: 1rem 0;
+}
+
+#projects .project .github-btn,
+#projects .project .project-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  margin: 1rem 0.5rem;
+  transition: opacity 0.3s ease;
+}
+
+#projects .project .github-btn:hover,
+#projects .project .project-btn:hover {
+  /* transform: translateY(5px); */
+  opacity: 0.6;
+}
+
+#projects .project .project-btn {
+  background: #00a3a3;
+  color: #fff;
+}
+
+#projects .project .github-btn {
+  background: #fff;
+  color: #00a3a3;
 }
