@@ -124,21 +124,8 @@ body {
     font-size: 3rem;
   }
 
-  #welcome-section .welcome-banner h1 span {
-    color: #00a3a3;
-  }
-
   #welcome-section .welcome-banner h3 {
     font-size: 2.3rem;
-    margin-bottom: 1.5rem;
-  }
-
-  #welcome-section .welcome-banner .btn {
-    background: #00a3a3;
-    padding: 0.5rem 1rem;
-    font-size: 1.2rem;
-    border-radius: 1.5rem;
-    transition: opacity 0.3s ease;
   }
 }
 
