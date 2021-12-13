@@ -12,34 +12,58 @@ loadEventListeners();
 function loadEventListeners() {
   // Add Task Event
   form.addEventListener("submit", addGuest);
+  // Remove Guest Event
+  guestList.addEventListener("click", removeGuest);
+  // Clear Guest list
+  clearBtn.addEventListener("click", clearGuest);
 }
+
+// =======================================================================
 
 // Add Guest
 function addGuest(e) {
   if (guestInput.value === "") {
     alert("Add a guest");
+  } else {
+    // Creat li element
+    const li = document.createElement("li");
+    // Add class
+    li.className = "guest";
+    // Create p element and text
+    const p = document.createElement("p");
+    p.innerText = `${guestInput.value}`;
+    // Create i element
+    const i = document.createElement("i");
+    // Add class
+    i.className = "fa fa-remove delete-item";
+    // Append P el to LI
+    li.appendChild(p);
+    // Append I el to li
+    li.appendChild(i);
+
+    guestList.appendChild(li);
+
+    // Clear input
+    guestInput.value = "";
   }
 
-  // Creat li element
-  const li = document.createElement("li");
-  // Add class
-  li.className = "guest";
-  // Create p element and text
-  const p = document.createElement("p");
-  p.innerText = `${guestInput.value}`;
-  // Create i element
-  const i = document.createElement("i");
-  // Add class
-  i.className = "fa fa-remove delete-item";
-  // Append P el to LI
-  li.appendChild(p);
-  // Append I el to li
-  li.appendChild(i);
+  e.preventDefault();
+}
 
-  guestList.appendChild(li);
-
-  // Clear input
-  guestInput.value = "";
+// Remove Guest
+function removeGuest(e) {
+  if (e.target.classList.contains("delete-item")) {
+    if (confirm("Are you sure?")) {
+      e.target.parentElement.remove();
+    }
+  }
 
   e.preventDefault();
+}
+
+// Clear Guest
+function clearGuest() {
+  while (guestList.firstChild) {
+    guestList.removeChild(guestList.firstChild);
+  }
 }
