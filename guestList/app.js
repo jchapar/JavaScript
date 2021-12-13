@@ -10,6 +10,8 @@ loadEventListeners();
 
 // Load event listeners
 function loadEventListeners() {
+  // DOM load event
+  document.addEventListener("DOMContentLoaded", getGuests);
   // Add Task Event
   form.addEventListener("submit", addGuest);
   // Remove Guest Event
@@ -21,6 +23,36 @@ function loadEventListeners() {
 }
 
 // =======================================================================
+
+// Get Guest from LS
+function getGuests() {
+  let guests;
+  if (localStorage.getItem("guests") === null) {
+    guests = [];
+  } else {
+    guests = JSON.parse(localStorage.getItem("guests"));
+  }
+
+  guests.forEach(function (guest) {
+    // Creat li element
+    const li = document.createElement("li");
+    // Add class
+    li.className = "guest";
+    // Create p element and text
+    const p = document.createElement("p");
+    p.innerText = `${guest}`;
+    // Create i element
+    const i = document.createElement("i");
+    // Add class
+    i.className = "fa fa-remove delete-item";
+    // Append P el to LI
+    li.appendChild(p);
+    // Append I el to li
+    li.appendChild(i);
+
+    guestList.appendChild(li);
+  });
+}
 
 // Add Guest
 function addGuest(e) {
@@ -45,11 +77,28 @@ function addGuest(e) {
 
     guestList.appendChild(li);
 
+    // Store in LS
+    storeGuestInLocalStorage(guestInput.value);
+
     // Clear input
     guestInput.value = "";
   }
 
   e.preventDefault();
+}
+
+// Store Guest
+function storeGuestInLocalStorage(guest) {
+  let guests;
+  if (localStorage.getItem("guests") === null) {
+    guests = [];
+  } else {
+    guests = JSON.parse(localStorage.getItem("guests"));
+  }
+
+  guests.push(guest);
+
+  localStorage.setItem("guests", JSON.stringify(guests));
 }
 
 // Remove Guest
