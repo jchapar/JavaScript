@@ -16,6 +16,8 @@ function loadEventListeners() {
   guestList.addEventListener("click", removeGuest);
   // Clear Guest list
   clearBtn.addEventListener("click", clearGuest);
+  // Filter Guest list
+  filter.addEventListener("keyup", filterGuest);
 }
 
 // =======================================================================
@@ -66,4 +68,18 @@ function clearGuest() {
   while (guestList.firstChild) {
     guestList.removeChild(guestList.firstChild);
   }
+}
+
+// Filter Guest
+function filterGuest(e) {
+  const text = e.target.value.toLowerCase();
+
+  document.querySelectorAll(".guest").forEach(function (guest) {
+    const item = guest.firstChild.textContent;
+    if (item.toLowerCase().indexOf(text) != -1) {
+      guest.style.display = "flex";
+    } else {
+      guest.style.display = "none";
+    }
+  });
 }
