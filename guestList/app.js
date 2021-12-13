@@ -106,10 +106,31 @@ function removeGuest(e) {
   if (e.target.classList.contains("delete-item")) {
     if (confirm("Are you sure?")) {
       e.target.parentElement.remove();
+
+      // Remove from LS
+      removeGuestFromLocalStorage(e.target.parentElement);
     }
   }
 
   e.preventDefault();
+}
+
+// Remove Guest from LS
+function removeGuestFromLocalStorage(guestItem) {
+  let guests;
+  if (localStorage.getItem("guests") === null) {
+    guests = [];
+  } else {
+    guests = JSON.parse(localStorage.getItem("guests"));
+  }
+
+  guests.forEach(function (guest, index) {
+    if (guestItem.textContent === guest) {
+      guests.splice(index, 1);
+    }
+  });
+
+  localStorage.setItem("guests", JSON.stringify(guests));
 }
 
 // Clear Guest
