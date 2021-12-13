@@ -138,6 +138,14 @@ function clearGuest() {
   while (guestList.firstChild) {
     guestList.removeChild(guestList.firstChild);
   }
+
+  // Clear Guests from LS
+  clearGuestFromLocalStorage();
+}
+
+// Clear from LS
+function clearGuestFromLocalStorage() {
+  localStorage.clear();
 }
 
 // Filter Guest
